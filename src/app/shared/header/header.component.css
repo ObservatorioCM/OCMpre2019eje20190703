@@ -1,0 +1,12 @@
+#logo {
+  margin-top: 10px;
+}
+
+#titulo {
+  font-weight: 700 !important;
+  margin-top: 10px;
+  color: #3c4858;
+  font-family: var(--fuente-principal);
+  font-size: 28px;
+  text-shadow: 4px 4px 4px #aaa;
+}
