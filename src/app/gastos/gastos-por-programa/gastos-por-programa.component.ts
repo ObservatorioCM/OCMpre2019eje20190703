@@ -8,8 +8,6 @@ import { NgSelectModule } from '@ng-select/ng-select';
 // href='https://github.com/ng-select/ng-select'>Open in Github</a></small></h1>
 // npm install --save @ng-select/ng-select
 
-declare var $: any;
-
 let viz;
 declare var tableau;
 
@@ -19,23 +17,16 @@ declare var tableau;
   styleUrls: ['./gastos-por-programa.component.css']
 })
 export class GastosPorProgramaComponent implements OnInit {
-  datos;
-
-  constructor() {}
-
-  ngOnInit() {
-     let vez = 0;
+   ngOnInit() {
      initVizEjecucion('');
 
      function initVizEjecucion(DesPro) {
-       vez += 1;
-       if (vez > 1) {
-         viz.dispose();
-       }
-       const containerDivGastos = document.getElementById('vizContainerGastos'),
-       urlGastos = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/PorProgramaWEB',
-         options = {
-           'Des Pro': DesPro,
+       if (viz !== undefined) {viz.dispose(); }
+
+       const containerDivGastos = document.getElementById('vizContainerGastos');
+       const urlGastos = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/PorProgramaWEB';
+       const options = {
+          'Des Pro': DesPro,
            hideTabs: true
          };
        viz = new tableau.Viz(containerDivGastos, urlGastos, options);
