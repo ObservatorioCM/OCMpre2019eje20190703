@@ -12,6 +12,9 @@ export class IndiceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // let txt = '';
+    // txt = '>Total width/height: ' + screen.availWidth + '*' + screen.availHeight;
+    // console.log(txt);
   }
 
 }

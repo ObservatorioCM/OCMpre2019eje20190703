@@ -9,16 +9,16 @@ declare var tableau;
 })
 export class GastosPorEconomicoComponent implements OnInit {
  ngOnInit() {
-function initVizEconomicos(DesEco) {
+  function initViz(DesEco: string) {
   const containerDiv = document.getElementById('vizContainerEconomicos');
-  const urlEconomicos = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/PorEconomicoWEB';
+  const urlTableau = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/PorEconomicoWEB';
   const options = {
      'Des Eco': DesEco,
       hideTabs: true,
       showShareOptions: true
     };
-  viz = new tableau.Viz(containerDiv, urlEconomicos, options);
+  viz = new tableau.Viz(containerDiv, urlTableau, options);
     }
-initVizEconomicos('');
+  initViz('');
   }
 }

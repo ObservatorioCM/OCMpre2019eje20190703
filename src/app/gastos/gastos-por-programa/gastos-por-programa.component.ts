@@ -10,7 +10,6 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 let viz;
 declare var tableau;
-
 @Component({
   selector: 'app-gastos-por-programa',
   templateUrl: './gastos-por-programa.component.html',
@@ -18,18 +17,18 @@ declare var tableau;
 })
 export class GastosPorProgramaComponent implements OnInit {
    ngOnInit() {
-     initVizEjecucion('');
+     initViz('');
 
-     function initVizEjecucion(DesPro) {
+     function initViz(DesPro: string) {
        if (viz !== undefined) {viz.dispose(); }
 
-       const containerDivGastos = document.getElementById('vizContainerGastos');
-       const urlGastos = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/PorProgramaWEB';
+       const containerDiv = document.getElementById('vizContainerGastos');
+       const urlTableau = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/ProgramaMovil';
        const options = {
           'Des Pro': DesPro,
            hideTabs: true
          };
-       viz = new tableau.Viz(containerDivGastos, urlGastos, options);
+       viz = new tableau.Viz(containerDiv, urlTableau, options);
      }
   }
 }
