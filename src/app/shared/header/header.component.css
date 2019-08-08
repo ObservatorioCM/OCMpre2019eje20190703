@@ -1,12 +1,41 @@
+
+.home {
+  /* align-self: flex-start */
+}
+
+
 #logo {
   margin-top: 10px;
 }
 
 #titulo {
   font-weight: 700 !important;
-  margin-top: 10px;
+  margin-top: 20px;
   color: #3c4858;
   font-family: var(--fuente-principal);
   font-size: 28px;
   text-shadow: 4px 4px 4px #aaa;
 }
+
+
+/* --------------------------------------------------------------------- */
+/* https://lenguajecss.com/p/css/propiedades/responsive-design */
+@media screen and (max-width: 640px) {
+
+  #logo {
+    margin-top: 2px;
+    width: 173px;
+    height: 37px;
+    }
+
+    #titulo {
+      font-weight: 700 !important;
+      margin-top: 2px;
+      color: #3c4858;
+      font-family: var(--fuente-principal);
+      font-size: 10px;
+      text-shadow: 2px 2px 2px #aaa;
+    }
+}
+/* --------------------------------------------------------------------- */
+

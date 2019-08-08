@@ -1,0 +1,27 @@
+
+    #tituloEconomico {
+      font-weight: 700 !important;
+      margin-top: 2px;
+      color: #e40f0f;
+      font-family: var(--fuente-principal);
+      font-size: 10px;
+      text-shadow: 2px 2px 2px #aaa;
+      text-align: center;
+    }
+
+/* --------------------------------------------------------------------- */
+/* https://lenguajecss.com/p/css/propiedades/responsive-design */
+@media screen and (max-width: 640px) {
+
+    #tituloEconomico {
+      font-weight: 700 !important;
+      margin-top: 2px;
+      color: #e40f0f;
+      font-family: var(--fuente-principal);
+      font-size: 10px;
+      text-shadow: 2px 2px 2px #aaa;
+      text-align: center;
+    }
+}
+/* --------------------------------------------------------------------- */
+

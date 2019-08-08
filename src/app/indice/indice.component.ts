@@ -1,6 +1,7 @@
 // TODO:Cambiar ProgramasOCM en angular.json para que no aparezca como nombre de carpeta en dist.
 
 import { Component, OnInit } from '@angular/core';
+import { GetScreenSizeService } from '../services/get-screen-size.service';
 
 @Component({
   selector: 'app-indice',
@@ -8,13 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./indice.component.css']
 })
 export class IndiceComponent implements OnInit {
-
-  constructor() { }
+  pantallaSize: string;
+  constructor(private getScreenSizeService: GetScreenSizeService) { }
 
   ngOnInit() {
-    // let txt = '';
-    // txt = '>Total width/height: ' + screen.availWidth + '*' + screen.availHeight;
-    // console.log(txt);
+    this.pantallaSize = this.getScreenSizeService.getIsMobileResolution();
+    console.log(this.pantallaSize);
   }
 
 }

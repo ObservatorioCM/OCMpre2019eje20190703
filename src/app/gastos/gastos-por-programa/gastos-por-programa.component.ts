@@ -1,12 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { NgSelectModule } from '@ng-select/ng-select';
-// href='https://github.com/ng-select/ng-select'>Open in Github</a></small></h1>
-// npm install --save @ng-select/ng-select
+import { Component, OnInit, ɵConsole } from '@angular/core';
+import { GetScreenSizeService } from '../../services/get-screen-size.service';
 
 let viz;
 declare var tableau;
@@ -16,19 +9,49 @@ declare var tableau;
   styleUrls: ['./gastos-por-programa.component.css']
 })
 export class GastosPorProgramaComponent implements OnInit {
-   ngOnInit() {
-     initViz('');
+  screenSize: string;
 
-     function initViz(DesPro: string) {
-       if (viz !== undefined) {viz.dispose(); }
+  constructor(private getScreenSizeService: GetScreenSizeService) {}
+  ngOnInit() {
+    this.screenSize = this.getScreenSizeService.getIsMobileResolution();
+    initViz('', this.screenSize);
 
-       const containerDiv = document.getElementById('vizContainerGastos');
-       const urlTableau = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/ProgramaMovil';
-       const options = {
-          'Des Pro': DesPro,
-           hideTabs: true
-         };
-       viz = new tableau.Viz(containerDiv, urlTableau, options);
-     }
+    function initViz(DesPro: string, screenSize: string) {
+      let urlTableau: any;
+      const containerDiv = document.getElementById('vizContainerGastos');
+      const urlBase = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/';
+
+      switch (true) {
+        case (screenSize === 'XS'):
+          console.log('pantalla XS');
+          urlTableau = urlBase + 'PorProgramaXS';
+          break;
+        case (screenSize === 'SM'):
+          console.log('pantalla SM');
+          urlTableau = urlBase + 'PorProgramaSM';
+          break;
+        case (screenSize === 'MD'):
+          console.log('pantalla MD');
+          urlTableau = urlBase + 'PorProgramaSM';
+          break;
+        case (screenSize === 'LG'):
+          console.log('pantalla LG');
+          urlTableau = urlBase + 'ProgramaMovil';
+          break;
+        case (screenSize === 'XL'):
+          console.log('pantalla XL');
+          urlTableau = urlBase + 'PorProgramaXL';
+          break;
+        default:
+          // code block
+      }
+
+      const options = {
+        'Des Pro': DesPro,
+        hideTabs: true,
+        showShareOptions: true
+      };
+      viz = new tableau.Viz(containerDiv, urlTableau, options);
+    }
   }
 }
