@@ -25,12 +25,12 @@
 
 
 
-  <div class="text-center" id="logo">
+  <!-- <div class="text-center" id="logo">
     <a class="home" routerLink="/">
     <i class="fa fa-home fa-2x" aria-hidden="true"></i>
   </a>
     <img src="./assets/img/LogoOCM.png" class="img-fluid" alt="Logo OCM">
-  </div>
+  </div> -->
 
 
   <!-- <div class="text-center">
@@ -39,8 +39,25 @@
     </li>
   </div> -->
 
-  <div>
-      <h4 class="text-center" id="titulo"> Datos del estado de ejecución presupuesto 2019 al 3 de julio de 2019.</h4>
-    </div>
+  <!-- <div>
+      <h4 class="text-center" id="titulo"> Datos del estado de ejecución presupuesto 2019 al 7 de agosto de 2019.</h4>
+    </div> -->
 
 </header>
+
+
+<div class="row">
+    <div class="col-2 text-right align-self-center">
+          <a routerLink="/" *ngIf="router.url !== '/home'">
+          <i class="fa fa-home " aria-hidden="true" id="home"></i>
+        </a>
+    </div>
+    <div class="col-8 text-center">
+        <img src="./assets/img/LogoOCM.png" id="logo" alt="Logo OCM">
+    </div>
+    <div class="col-2"></div>
+</div>
+
+ <div>
+      <h4 class="text-center" id="titulo"> Datos del estado de ejecución presupuesto 2019 al 7 de agosto de 2019.</h4>
+ </div>

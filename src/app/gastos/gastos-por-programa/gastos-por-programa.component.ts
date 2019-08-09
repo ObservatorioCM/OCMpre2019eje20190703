@@ -13,13 +13,15 @@ export class GastosPorProgramaComponent implements OnInit {
 
   constructor(private getScreenSizeService: GetScreenSizeService) {}
   ngOnInit() {
+    const verHome = true;
     this.screenSize = this.getScreenSizeService.getIsMobileResolution();
     initViz('', this.screenSize);
 
     function initViz(DesPro: string, screenSize: string) {
       let urlTableau: any;
       const containerDiv = document.getElementById('vizContainerGastos');
-      const urlBase = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/';
+      const urlBase = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa07-08-2019MAM/';
+      // https://public.tableau.com/profile/ocmjerez#!/vizhome/EstadoEjecucin2019Gastosporaplicacionesa07-08-2019MAM/PorProgramaXS?publish=yes
 
       switch (true) {
         case (screenSize === 'XS'):
@@ -28,15 +30,15 @@ export class GastosPorProgramaComponent implements OnInit {
           break;
         case (screenSize === 'SM'):
           console.log('pantalla SM');
-          urlTableau = urlBase + 'PorProgramaSM';
+          urlTableau = urlBase + 'PorProgramaXS';
           break;
         case (screenSize === 'MD'):
           console.log('pantalla MD');
-          urlTableau = urlBase + 'PorProgramaSM';
+          urlTableau = urlBase + 'PorProgramaMD';
           break;
         case (screenSize === 'LG'):
           console.log('pantalla LG');
-          urlTableau = urlBase + 'ProgramaMovil';
+          urlTableau = urlBase + 'PorProgramaMD';
           break;
         case (screenSize === 'XL'):
           console.log('pantalla XL');

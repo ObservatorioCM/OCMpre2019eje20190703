@@ -11,11 +11,14 @@ screenSize: string;
 w: number;
 anio: number = new Date().getFullYear();
 
-  constructor(private getScreenSizeService: GetScreenSizeService) {}
+  constructor(public getScreenSizeService: GetScreenSizeService) {}
 
   ngOnInit() {
     this.w = window.innerWidth;
     this.screenSize = this.getScreenSizeService.getIsMobileResolution();
+    window.addEventListener("orientationchange", function() {
+       window.location.reload();
+    }, false);
   }
 
 }

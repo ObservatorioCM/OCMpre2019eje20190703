@@ -18,7 +18,7 @@ export class GastosPorEconomicoComponent implements OnInit {
   function initViz(DesEco: string, screenSize: string) {
     let urlTableau: any;
     const containerDiv = document.getElementById('vizContainerEconomicos');
-    const urlBase = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa03-07-2019MAM/';
+    const urlBase = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa07-08-2019MAM/';
 
     switch (true) {
     case (screenSize === 'XS'):
@@ -27,19 +27,19 @@ export class GastosPorEconomicoComponent implements OnInit {
       break;
     case (screenSize === 'SM'):
       console.log('pantalla SM');
-      urlTableau = urlBase + 'ProgramaMovil';
+      urlTableau = urlBase + 'PorEconomicoXS';
       break;
     case (screenSize === 'MD'):
       console.log('pantalla MD');
-      urlTableau = urlBase + 'ProgramaMovil';
+      urlTableau = urlBase + 'PorEconomicoMD';
       break;
     case (screenSize === 'LG'):
       console.log('pantalla LG');
-      urlTableau = urlBase + 'ProgramaMovil';
+      urlTableau = urlBase + 'PorEconomicoMD';
       break;
     case (screenSize === 'XL'):
       console.log('pantalla XL');
-      urlTableau = urlBase + 'PorProgramaXL';
+      urlTableau = urlBase + 'PorEconomicoXL';
       break;
     default:
       // code block
