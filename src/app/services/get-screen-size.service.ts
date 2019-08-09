@@ -16,7 +16,7 @@ export class GetScreenSizeService {
 // XL Extra large devices (large desktops, 1200px and up)
 
   public getIsMobileResolution(): string {
-    console.log(window.innerWidth);
+    // console.log(window.innerWidth);
     switch (true) {
       case (window.innerWidth <= 576):
         // El Samsung Note 8 mio, dice que es una pantalla XS 427.

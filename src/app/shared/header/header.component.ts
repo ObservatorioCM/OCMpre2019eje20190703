@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
    constructor(public router: Router) { }
 
   ngOnInit() {
-    console.log(this.router.url);
+    // console.log(this.router.url);
   }
 
 }
