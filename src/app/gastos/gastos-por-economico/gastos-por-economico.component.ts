@@ -18,7 +18,7 @@ export class GastosPorEconomicoComponent implements OnInit {
   function initViz(DesEco: string, screenSize: string) {
     let urlTableau: any;
     const containerDiv = document.getElementById('vizContainerEconomicos');
-    const urlBase = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa07-08-2019MAM/';
+    const urlBase = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa02-09-2019OCM/';
 
     switch (true) {
     case (screenSize === 'XS'):

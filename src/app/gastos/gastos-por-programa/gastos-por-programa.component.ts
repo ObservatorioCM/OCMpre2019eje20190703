@@ -20,8 +20,9 @@ export class GastosPorProgramaComponent implements OnInit {
     function initViz(DesPro: string, screenSize: string) {
       let urlTableau: any;
       const containerDiv = document.getElementById('vizContainerGastos');
-      const urlBase = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa07-08-2019MAM/';
+      const urlBase = 'https://public.tableau.com/views/EstadoEjecucin2019Gastosporaplicacionesa02-09-2019OCM/';
       // https://public.tableau.com/profile/ocmjerez#!/vizhome/EstadoEjecucin2019Gastosporaplicacionesa07-08-2019MAM/PorProgramaXS?publish=yes
+      // https://public.tableau.com/profile/ocmjerez#!/vizhome/EstadoEjecucin2019Gastosporaplicacionesa02-09-2019OCM/PorProgramaXL?publish=yes
 
       switch (true) {
         case (screenSize === 'XS'):
