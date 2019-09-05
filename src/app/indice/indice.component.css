@@ -10,7 +10,7 @@
 }
 
 .ingresos {
-  border: 10px, solid black;
+  /* border: 10px, solid black; */
   margin-top: 10px;
    margin-right: 10px;
    margin-left: 10px;
@@ -133,7 +133,7 @@ p {
 /* -----------------------------------------------------------------------------------------------*/
 @media screen and (max-width:750px) {
   .gastos {
-    border: 10px, solid black;
+    /* border: 10px, solid black; */
     margin-top: 10px;
     margin-right: 10px;
     margin-left: 10px;
@@ -146,7 +146,7 @@ p {
    }
 
    .ingresos {
-    border: 10px, solid black;
+    /* border: 10px, solid black; */
     margin-top: 10px;
     margin-right: 10px;
     margin-left: 10px;
