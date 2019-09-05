@@ -20,7 +20,8 @@
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: 240px;
    justify-content: center;
- }
+
+   }
 
 .gastos {
  /* border: 10px, solid black; */
@@ -85,6 +86,10 @@ p {
   background: #fff;
   width: 100%;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  max-height: 215px;
 }
 
 .card-title{
@@ -126,7 +131,7 @@ p {
 
 
 /* -----------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width:750px) {
   .gastos {
     border: 10px, solid black;
     margin-top: 10px;
@@ -137,7 +142,6 @@ p {
     grid-gap: 2rem;
     grid-template-columns: 20% 30% 30% 20%;
     grid-template-rows: 100%;
-
     justify-content: center;
    }
 
