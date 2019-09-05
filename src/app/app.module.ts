@@ -14,7 +14,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { GastosPorEconomicoComponent } from './gastos/gastos-por-economico/gastos-por-economico.component';
 import { GastosPorProgramaComponent } from './gastos/gastos-por-programa/gastos-por-programa.component';
-// import { IngresosPoÇrEconomicoComponent } from './ingresos/ingresos-por-economico/ingresos-por-economico.component';
+import { IngresosPorEconomicoComponent } from './ingresos/ingresos-por-economico/ingresos-por-economico.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { GastosPorProgramaComponent } from './gastos/gastos-por-programa/gastos-
     FooterComponent,
     AboutComponent,
     GastosPorEconomicoComponent,
-    GastosPorProgramaComponent
+    GastosPorProgramaComponent,
+    IngresosPorEconomicoComponent
   ],
   imports: [
     BrowserModule,
