@@ -4,3 +4,24 @@
   --obscuro: #484848;
   --claro: #ffffff;
 }
+
+body{
+  display:flex;
+  flex-direction: column;
+}
+
+main{
+  /* min-height: 100vh; will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 80px; /* height of your footer */
+
+  flex: 1;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+
+
+}
