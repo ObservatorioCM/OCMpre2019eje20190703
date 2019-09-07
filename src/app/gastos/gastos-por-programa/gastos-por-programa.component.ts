@@ -52,6 +52,8 @@ export class GastosPorProgramaComponent implements OnInit {
       const options = {
         'Des Pro': DesPro,
         hideTabs: true,
+        // height: '100%',
+        // width: '100%',
         showShareOptions: true
       };
       viz = new tableau.Viz(containerDiv, urlTableau, options);

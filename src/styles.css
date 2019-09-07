@@ -15,7 +15,8 @@ main{
   overflow: hidden;
   display: block;
   position: relative;
-  padding-bottom: 80px; /* height of your footer */
+  /* height of your footer */
+  /* padding-bottom: 80px;  */
 
   flex: 1;
   /* display: flex; */
