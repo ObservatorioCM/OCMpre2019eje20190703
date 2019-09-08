@@ -1,14 +1,20 @@
 /* https://www.w3schools.com/cssref/css_selectors.asp */
 .divIndice {
+  padding-top: 30px;
   height: 80vh;
+  /* margin-right: 10px; */
+  background: url('../../assets/img/textura.jpg') center center repeat;
+    /* background-size: 100vh; */
 }
 
 .rowTexto {
+  margin-top: 40px !important;
+  margin-bottom: 40px;
   font-weight: 900 !important;
   margin-top: 10px;
-  color: #ca3542;
+  color:black;
   font-family: var(--fuente-principal);
-  font-size: 35px;
+  font-size: 42px;
   text-shadow: 4px 4px 4px #aaa;
   text-align: center;
 }
