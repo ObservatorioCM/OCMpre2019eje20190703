@@ -14,7 +14,7 @@ export class IndiceComponent implements OnInit {
 
   ngOnInit() {
     this.pantallaSize = this.getScreenSizeService.getIsMobileResolution();
-    console.log(this.pantallaSize);
+    // console.log(this.pantallaSize);
   }
 
 }

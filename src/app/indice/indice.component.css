@@ -1,78 +1,29 @@
 /* https://www.w3schools.com/cssref/css_selectors.asp */
+.divIndice {
+  height: 80vh;
+}
 
-#ingresos, #gastos {
-  font-weight: 700 !important;
+.rowTexto {
+  font-weight: 900 !important;
   margin-top: 10px;
   color: #ca3542;
   font-family: var(--fuente-principal);
-  font-size: 48px;
+  font-size: 35px;
   text-shadow: 4px 4px 4px #aaa;
+  text-align: center;
 }
 
-.ingresos {
-  /* border: 10px, solid black; */
-  margin-top: 10px;
-   margin-right: 10px;
-   margin-left: 10px;
-   margin-bottom: 10px;
-  display: grid;
-   grid-gap: 2rem;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 240px;
-   justify-content: center;
-
-   }
-
-.gastos {
- /* border: 10px, solid black; */
+.rowStyle {
   margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
   margin-bottom: 10px;
-  display: grid;
-  grid-gap: 2rem;
-  /* grid-template-columns: 20% 30% 30% 20%;
-  grid-template-rows: 240px; */
-  /* https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp */
-  /* https://www.udemy.com/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/v4/t/lecture/10276668?start=0 */
-  /* grid area */
-  /* Grid: row row / columns colums... */
-  grid: 240px / 20% 30% 30% 20%;
-  grid-auto-flow: dense;
+  display: flex;
+  /* grid-gap: 2rem;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 240px; */
   justify-content: center;
-}
-
-img{
-  width: 100%;
-  height: 100%;
-}
-
-.h1, .h2, .h3, .h4, body, h1, h2, h3, h4, h5, h6 {
-  font-family: Roboto,Helvetica,Arial,sans-serif;
-  font-weight: 300;
-  line-height: 1.5em !important;
-}
-
-h3 {
-  font-weight: 900!important;
-  font-size: 35px !important;
-  color: red
-}
-
-h4 {
-  font-size: 14px !important;
-}
-
-h6 {
-  font-size: 12px !important;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-p {
-  font-size: 14px;
-  margin: 0 0 10px;
-  font-weight: 300;
+  text-align: center;
 }
 
 /* Card --------------------------------------------------------------------- */
@@ -82,31 +33,18 @@ p {
   margin-bottom: 3px;
   margin-top: 20px;
   border-radius: 6px !important;
-  color: rgba(0,0,0,.87);
+  color: rgba(0, 0, 0, 0.87);
   background: #fff;
   width: 100%;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   margin-left: auto;
   margin-right: auto;
   max-width: 300px;
   max-height: 215px;
-}
-
-.card-title{
-  font-weight: 700 !important;
-  margin-top: 10px;
-  color: #3c4858;
-  font-family: var(--fuente-principal);
-  font-size: 48px;
-  text-shadow: 4px 4px 4px #aaa;
   text-align: center;
 }
 
-.card.card-profile{
-  text-align: center;
-}
-
-.card .card-header.card-header-image {
+.cardHeaderImage {
   position: relative;
   padding: 0;
   z-index: 1;
@@ -117,54 +55,74 @@ p {
   max-height: 215px;
 }
 
-.card .card-header.card-header-image .card-title {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  color: #fff;
-  font-size: 1.125rem;
-  text-shadow: 0 2px 5px rgba(33,33,33,.5);
-  font-weight: 700;
-  font-family: var(--fuente-principal);;
+.cardHeaderImage img {
+  width: 80%;
+  height: 80%;
+}
+
+.card-title {
+  font-weight: 700 !important;
+  margin-top: 10px;
+  color: #3c4858;
+  font-family: var(--fuente-principal);
+  font-size: 14px;
+  text-shadow: 4px 4px 4px #aaa;
+  text-align: center;
 }
 /* End Card --------------------------------------------------------------------- */
 
-
 /* -----------------------------------------------------------------------------------------------*/
-@media screen and (max-width:750px) {
-  .gastos {
-    /* border: 10px, solid black; */
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: 20% 30% 30% 20%;
-    grid-template-rows: 100%;
-    justify-content: center;
-   }
-
-   .ingresos {
-    /* border: 10px, solid black; */
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100%;
-    justify-content: center;
-   }
-
-   #ingresos, #gastos {
-    font-weight: 700 !important;
-    margin-top: 2px;
-    color: #ca3542;
-    font-family: var(--fuente-principal);
-    font-size: 16px;
-    /* text-shadow: 4px 4px 4px #aaa; */
-  }
+@media screen and (max-width: 750px) {
 }
 /* -----------------------------------------------------------------------------------------------*/
+
+
+
+/* ---------------- INFORMACIÓN  --------------------------------------------------------*/
+/* https://www.w3schools.com/cssref/css_selectors.asp */
+/* Seperado por punto.
+Selects all elements with both name1 and name2 set within its class attribute.
+.class1.class2
+<div class="name1 name2">...</div>
+
+Separado por espacio.
+Selects all elements with name2 that is a descendant of an element with name1
+.class1 .class2
+<div class="name1">
+  <div class="name2"> </div>
+</div> */
+/* -----------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* .gastos { */
+/* border: 10px, solid black; */
+/* margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-gap: 2rem; */
+/* grid-template-columns: 20% 30% 30% 20%;
+  grid-template-rows: 240px; */
+/* https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp */
+/* https://www.udemy.com/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/learn/v4/t/lecture/10276668?start=0 */
+/* grid area */
+/* Grid: row row / columns colums... */
+/* grid: 240px / 20% 30% 30% 20%;
+  grid-auto-flow: dense;
+  justify-content: center; */
+/* } */
+
+/* #ingresos, #gastos {
+  font-weight: 700 !important;
+  margin-top: 10px;
+  color: #ca3542;
+  font-family: var(--fuente-principal);
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+
+} */

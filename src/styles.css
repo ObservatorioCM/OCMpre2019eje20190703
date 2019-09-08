@@ -23,6 +23,8 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center
+}
 
-
+#vizContainerTableau{
+  height: 80vh;
 }
