@@ -3,7 +3,7 @@
   padding-top: 30px;
   height: 80vh;
   /* margin-right: 10px; */
-  background: url('../../assets/img/textura.jpg') center center repeat;
+  background: url('../../assets/img/textura.jpg') ;
     /* background-size: 100vh; */
 }
 
@@ -25,9 +25,6 @@
   margin-left: 10px;
   margin-bottom: 10px;
   display: flex;
-  /* grid-gap: 2rem;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 240px; */
   justify-content: center;
   text-align: center;
 }
@@ -35,7 +32,7 @@
 /* Card --------------------------------------------------------------------- */
 /* https://www.w3schools.com/bootstrap4/bootstrap_cards.asp */
 .card {
-  border: 0;
+  /* border: 0; */
   margin-bottom: 3px;
   margin-top: 20px;
   border-radius: 6px !important;
@@ -43,8 +40,8 @@
   background: #fff;
   width: 100%;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
+  margin-right: 20px;
   max-width: 300px;
   max-height: 215px;
   text-align: center;
