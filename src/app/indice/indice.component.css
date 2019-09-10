@@ -2,9 +2,20 @@
 .divIndice {
   padding-top: 30px;
   height: 80vh;
-  /* margin-right: 10px; */
-  background: url('../../assets/img/textura.jpg') ;
-    /* background-size: 100vh; */
+ }
+
+/* Como CSS no tiene la propiedad background.opacity
+insertamosun seudo elemento con el mismo tamaño. */
+.divIndice::after {
+  content: "";
+  background: url('../../assets/img/textura.jpg');
+  opacity: 0,5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .rowTexto {

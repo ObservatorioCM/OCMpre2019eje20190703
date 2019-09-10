@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 <!-- SEO Meta Tags -->
-<meta name="description" content="Daros de la ejecución del presupuesto del Ayuntamiento de Jerez.">
+<meta name="description" content="Datos de la ejecución del presupuesto del Ayuntamiento de Jerez.">
 <meta name="author" content="OCM Jerez">
 
 <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
@@ -15,6 +15,7 @@
 <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
 <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
 <meta property="og:type" content="article" />
+
 
   <title>OCM Jerez</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,22 +49,17 @@
   <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
 
   <!-- Custom scripts -->
-  <!-- <script src="../src/app/js/scripts1.js"></script> -->
-
-
-  <script>
-  /* Preloader */
-	$(window).on('load', function() {
-		let preloaderFadeOutTime = 500;
-		function hidePreloader() {
-			var preloader = $('.spinner-wrapper');
-			setTimeout(function() {
-				preloader.fadeOut(preloaderFadeOutTime);
-			}, 500);
-		}
-		hidePreloader();
-	});
-</script>
-</body>
+  <script src="assets/js/scripts.js"></script>
+  </body>
 </html>
 
+<!-- core.js:6014 ERROR
+Exception$ {_message: "Viz resize limit hit. The calculated iframe size did not stabilize after 10 resizes.", _innerException: null, _error: Error
+    at new Exception$ (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:4:3027…, tableauSoftwareErrorCode: "maxVizResizeAttempts"}
+tableauSoftwareErrorCode: "maxVizResizeAttempts"
+_error: Error at new Exception$ (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:4:30273) at Function.q.create (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:8:5728) at M.$K (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:10:66500) at M.$j (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:10:81118) at M.$i (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:10:74944) at M.handleEventNotification (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:10:66761) at O.$1 (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:8:37117) at delegate (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:4:17752) at ZoneDelegate.invokeTask (http://localhost:4200/polyfills.js:3626:31) at Object.onInvokeTask (http://localhost:4200/vendor.js:70622:33)
+stack: "Error↵    at new Exception$ (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:4:30273)↵    at Function.q.create (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:8:5728)↵    at M.$K (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:10:66500)↵    at M.$j (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:10:81118)↵    at M.$i (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:10:74944)↵    at M.handleEventNotification (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:10:66761)↵    at O.$1 (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:8:37117)↵    at delegate (https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js:4:17752)↵    at ZoneDelegate.invokeTask (http://localhost:4200/polyfills.js:3626:31)↵    at Object.onInvokeTask (http://localhost:4200/vendor.js:70622:33)"
+__proto__: Object
+_innerException: null
+_message: "Viz resize limit hit. The calculated iframe size did not stabilize after 10 resizes."
+__proto__: Object -->
