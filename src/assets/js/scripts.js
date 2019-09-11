@@ -6,8 +6,8 @@
 
 
 (function($) {
-    "use strict"; 
-	
+    "use strict";
+
 	/* Preloader */
 	$(window).on('load', function() {
 		var preloaderFadeOutTime = 500;
@@ -20,7 +20,7 @@
 		hidePreloader();
 	});
 
-	
+
 	/* Navbar Scripts */
 	// jQuery to collapse the navbar on scroll
     $(window).on('scroll load', function() {
@@ -50,101 +50,101 @@
 
 
     /* Image Slider - Swiper */
-    var imageSlider = new Swiper('.image-slider', {
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false
-		},
-        loop: true,
-        spaceBetween: 30,
-        slidesPerView: 5,
-		breakpoints: {
-            // when window is <= 580px
-            580: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            },
-            // when window is <= 768px
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            // when window is <= 992px
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 20
-            },
-            // when window is <= 1200px
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 20
-            },
+    // var imageSlider = new Swiper('.image-slider', {
+    //     autoplay: {
+    //         delay: 2000,
+    //         disableOnInteraction: false
+		// },
+    //     loop: true,
+    //     spaceBetween: 30,
+    //     slidesPerView: 5,
+		// breakpoints: {
+    //         // when window is <= 580px
+    //         580: {
+    //             slidesPerView: 1,
+    //             spaceBetween: 10
+    //         },
+    //         // when window is <= 768px
+    //         768: {
+    //             slidesPerView: 2,
+    //             spaceBetween: 20
+    //         },
+    //         // when window is <= 992px
+    //         992: {
+    //             slidesPerView: 3,
+    //             spaceBetween: 20
+    //         },
+    //         // when window is <= 1200px
+    //         1200: {
+    //             slidesPerView: 4,
+    //             spaceBetween: 20
+    //         },
 
-        }
-    });
+    //     }
+    // });
 
 
     /* Card Slider - Swiper */
-	var cardSlider = new Swiper('.card-slider', {
-		autoplay: {
-            delay: 4000,
-            disableOnInteraction: false
-		},
-        loop: true,
-        navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		}
-    });
-    
+	// var cardSlider = new Swiper('.card-slider', {
+	// 	autoplay: {
+  //           delay: 4000,
+  //           disableOnInteraction: false
+	// 	},
+  //       loop: true,
+  //       navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev'
+	// 	}
+  //   });
+
 
     /* Video Lightbox - Magnific Popup */
-    $('.popup-youtube, .popup-vimeo').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false,
-        iframe: {
-            patterns: {
-                youtube: {
-                    index: 'youtube.com/', 
-                    id: function(url) {        
-                        var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
-                        if ( !m || !m[1] ) return null;
-                        return m[1];
-                    },
-                    src: 'https://www.youtube.com/embed/%id%?autoplay=1'
-                },
-                vimeo: {
-                    index: 'vimeo.com/', 
-                    id: function(url) {        
-                        var m = url.match(/(https?:\/\/)?(www.)?(player.)?vimeo.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/);
-                        if ( !m || !m[5] ) return null;
-                        return m[5];
-                    },
-                    src: 'https://player.vimeo.com/video/%id%?autoplay=1'
-                }
-            }
-        }
-    });
+    // $('.popup-youtube, .popup-vimeo').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false,
+    //     iframe: {
+    //         patterns: {
+    //             youtube: {
+    //                 index: 'youtube.com/',
+    //                 id: function(url) {
+    //                     var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+    //                     if ( !m || !m[1] ) return null;
+    //                     return m[1];
+    //                 },
+    //                 src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+    //             },
+    //             vimeo: {
+    //                 index: 'vimeo.com/',
+    //                 id: function(url) {
+    //                     var m = url.match(/(https?:\/\/)?(www.)?(player.)?vimeo.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/);
+    //                     if ( !m || !m[5] ) return null;
+    //                     return m[5];
+    //                 },
+    //                 src: 'https://player.vimeo.com/video/%id%?autoplay=1'
+    //             }
+    //         }
+    //     }
+    // });
 
 
     /* Lightbox - Magnific Popup */
-	$('.popup-with-move-anim').magnificPopup({
-		type: 'inline',
-		fixedContentPos: false, /* keep it false to avoid html tag shift with margin-right: 17px */
-		fixedBgPos: true,
-		overflowY: 'auto',
-		closeBtnInside: true,
-		preloader: false,
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-slide-bottom'
-	});
-    
-    
+	// $('.popup-with-move-anim').magnificPopup({
+	// 	type: 'inline',
+	// 	fixedContentPos: false, /* keep it false to avoid html tag shift with margin-right: 17px */
+	// 	fixedBgPos: true,
+	// 	overflowY: 'auto',
+	// 	closeBtnInside: true,
+	// 	preloader: false,
+	// 	midClick: true,
+	// 	removalDelay: 300,
+	// 	mainClass: 'my-mfp-slide-bottom'
+	// });
+
+
     /* Move Form Fields Label When User Types */
     // for input and textarea fields
     $("input, textarea").keyup(function(){
@@ -157,17 +157,17 @@
 
 
     /* Request Form */
-    $("#requestForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            rformError();
-            rsubmitMSG(false, "Please fill all fields!");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            rsubmitForm();
-        }
-    });
+    // $("#requestForm").validator().on("submit", function(event) {
+    // 	if (event.isDefaultPrevented()) {
+    //         // handle the invalid form...
+    //         rformError();
+    //         rsubmitMSG(false, "Please fill all fields!");
+    //     } else {
+    //         // everything looks good!
+    //         event.preventDefault();
+    //         rsubmitForm();
+    //     }
+    // });
 
     function rsubmitForm() {
         // initiate variables with form content
@@ -176,11 +176,11 @@
 		var phone = $("#rphone").val();
         var select = $("#rselect").val();
         var terms = $("#rterms").val();
-        
+
         $.ajax({
             type: "POST",
             url: "php/requestform-process.php",
-            data: "name=" + name + "&email=" + email + "&phone=" + phone + "&select=" + select + "&terms=" + terms, 
+            data: "name=" + name + "&email=" + email + "&phone=" + phone + "&select=" + select + "&terms=" + terms,
             success: function(text) {
                 if (text == "success") {
                     rformSuccess();
@@ -212,20 +212,20 @@
         }
         $("#rmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
-    
+
 
     /* Contact Form */
-    $("#contactForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            cformError();
-            csubmitMSG(false, "Please fill all fields!");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            csubmitForm();
-        }
-    });
+    // $("#contactForm").validator().on("submit", function(event) {
+    // 	if (event.isDefaultPrevented()) {
+    //         // handle the invalid form...
+    //         cformError();
+    //         csubmitMSG(false, "Please fill all fields!");
+    //     } else {
+    //         // everything looks good!
+    //         event.preventDefault();
+    //         csubmitForm();
+    //     }
+    // });
 
     function csubmitForm() {
         // initiate variables with form content
@@ -236,7 +236,7 @@
         $.ajax({
             type: "POST",
             url: "php/contactform-process.php",
-            data: "name=" + name + "&email=" + email + "&message=" + message + "&terms=" + terms, 
+            data: "name=" + name + "&email=" + email + "&message=" + message + "&terms=" + terms,
             success: function(text) {
                 if (text == "success") {
                     cformSuccess();
@@ -248,41 +248,41 @@
         });
 	}
 
-    function cformSuccess() {
-        $("#contactForm")[0].reset();
-        csubmitMSG(true, "Message Submitted!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
-        $("textarea").removeClass('notEmpty'); // resets the field label after submission
-    }
+  //   function cformSuccess() {
+  //       $("#contactForm")[0].reset();
+  //       csubmitMSG(true, "Message Submitted!");
+  //       $("input").removeClass('notEmpty'); // resets the field label after submission
+  //       $("textarea").removeClass('notEmpty'); // resets the field label after submission
+  //   }
 
-    function cformError() {
-        $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-	}
+  //   function cformError() {
+  //       $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+  //           $(this).removeClass();
+  //       });
+	// }
 
-    function csubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-center tada animated";
-        } else {
-            var msgClasses = "h3 text-center";
-        }
-        $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-    }
+  //   function csubmitMSG(valid, msg) {
+  //       if (valid) {
+  //           var msgClasses = "h3 text-center tada animated";
+  //       } else {
+  //           var msgClasses = "h3 text-center";
+  //       }
+  //       $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
+  //   }
 
 
     /* Privacy Form */
-    $("#privacyForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            pformError();
-            psubmitMSG(false, "Please fill all fields!");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            psubmitForm();
-        }
-    });
+    // $("#privacyForm").validator().on("submit", function(event) {
+    // 	if (event.isDefaultPrevented()) {
+    //         // handle the invalid form...
+    //         pformError();
+    //         psubmitMSG(false, "Please fill all fields!");
+    //     } else {
+    //         // everything looks good!
+    //         event.preventDefault();
+    //         psubmitForm();
+    //     }
+    // });
 
     function psubmitForm() {
         // initiate variables with form content
@@ -290,11 +290,11 @@
 		var email = $("#pemail").val();
         var select = $("#pselect").val();
         var terms = $("#pterms").val();
-        
+
         $.ajax({
             type: "POST",
             url: "php/privacyform-process.php",
-            data: "name=" + name + "&email=" + email + "&select=" + select + "&terms=" + terms, 
+            data: "name=" + name + "&email=" + email + "&select=" + select + "&terms=" + terms,
             success: function(text) {
                 if (text == "success") {
                     pformSuccess();
@@ -306,17 +306,17 @@
         });
 	}
 
-    function pformSuccess() {
-        $("#privacyForm")[0].reset();
-        psubmitMSG(true, "Request Submitted!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
-    }
+  //   function pformSuccess() {
+  //       $("#privacyForm")[0].reset();
+  //       psubmitMSG(true, "Request Submitted!");
+  //       $("input").removeClass('notEmpty'); // resets the field label after submission
+  //   }
 
-    function pformError() {
-        $("#privacyForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-	}
+  //   function pformError() {
+  //       $("#privacyForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+  //           $(this).removeClass();
+  //       });
+	// }
 
     function psubmitMSG(valid, msg) {
         if (valid) {
@@ -326,24 +326,24 @@
         }
         $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
-    
+
 
     /* Back To Top Button */
     // create the back to top button
-    $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
-    var amountScrolled = 700;
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > amountScrolled) {
-            $('a.back-to-top').fadeIn('500');
-        } else {
-            $('a.back-to-top').fadeOut('500');
-        }
-    });
+    // $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
+    // var amountScrolled = 700;
+    // $(window).scroll(function() {
+    //     if ($(window).scrollTop() > amountScrolled) {
+    //         $('a.back-to-top').fadeIn('500');
+    //     } else {
+    //         $('a.back-to-top').fadeOut('500');
+    //     }
+    // });
 
 
 	/* Removes Long Focus On Buttons */
-	$(".button, a, button").mouseup(function() {
-		$(this).blur();
-	});
+	// $(".button, a, button").mouseup(function() {
+	// 	$(this).blur();
+	// });
 
 })(jQuery);
